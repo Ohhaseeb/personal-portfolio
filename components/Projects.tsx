@@ -7,14 +7,14 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
-import Overview from '@/images/EnergyConsumptionOverview.png'
-import SignIn from '@/images/Signin.png'
-import Analytics from '@/images/Analytics.png'
-import AccountLink from '@/images/AccountLink.png'
-import RegisterWhip from '@/images/RegisterWhip.png'
-import Carlisting from '@/images/Carlisting.png'
-import ReserveCar from '@/images/ReserveCar.png'
-import Admin from '@/images/Admin.png'
+import Overview from '@/public/images/EnergyConsumptionOverview.png'
+import SignIn from '@/public/images/Signin.png'
+import Analytics from '@/public/images/Analytics.png'
+import AccountLink from '@/public/images/AccountLink.png'
+import RegisterWhip from '@/public/images/RegisterWhip.png'
+import Carlisting from '@/public/images/Carlisting.png'
+import ReserveCar from '@/public/images/ReserveCar.png'
+import Admin from '@/public/images/Admin.png'
 import Image from 'next/image';
 
 

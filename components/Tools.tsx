@@ -1,8 +1,8 @@
 import React from 'react'
-import nextjs from '@/images/nextjs-icon.png'
-import tailwind from '@/images/tailwind.png'
-import python from '@/images/python.png'
-import SQL from '@/images/SQL.jpg'
+import nextjs from '@/public/images/nextjs-icon.png'
+import tailwind from '@/public/images/tailwind.png'
+import python from '@/public/images/python.png'
+import SQL from '@/public/images/SQL.jpg'
 import Image from 'next/image';
 
 const Tools = () => {

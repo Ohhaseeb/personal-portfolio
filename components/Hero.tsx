@@ -1,7 +1,7 @@
 'use client'
 import { motion } from "framer-motion";
 import React from 'react'
-import haseeb from '@/images/haseeb.jpg'
+import haseeb from '@/public/images/haseeb.jpg'
 import Image from 'next/image';
 
 const Hero = () => {
