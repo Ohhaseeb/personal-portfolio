@@ -75,7 +75,7 @@ const Projects = () => {
                     <CardContent className='flex flex-row'>
                     <div className='w-[400px] h-[300px] relative'>
                     <Image className=' shadow-lg mb-4 object-cover'
-                    src={'/images/RegisterWhip.png'} 
+                    src={'/images/register.png'} 
                     alt="Haseeb"              
                     layout='fill'
      
