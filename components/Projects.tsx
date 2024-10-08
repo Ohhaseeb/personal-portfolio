@@ -11,7 +11,7 @@ import Overview from '@/public/images/EnergyConsumptionOverview.png'
 import SignIn from '@/public/images/Signin.png'
 import Analytics from '@/public/images/Analytics.png'
 import AccountLink from '@/public/images/AccountLink.png'
-import RegisterWhip from '@/public/images/RegisterWhip.png'
+// import RegisterWhip from '@/public/images/RegisterWhip.png'
 import Carlisting from '@/public/images/Carlisting.png'
 import ReserveCar from '@/public/images/ReserveCar.png'
 import Admin from '@/public/images/Admin.png'
@@ -75,7 +75,7 @@ const Projects = () => {
                     <CardContent className='flex flex-row'>
                     <div className='w-[400px] h-[300px] relative'>
                     <Image className=' shadow-lg mb-4 object-cover'
-                    src={RegisterWhip} 
+                    src={'/images/RegisterWhip.png'} 
                     alt="Haseeb"              
                     layout='fill'
      
