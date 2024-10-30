@@ -27,7 +27,7 @@ const Projects = () => {
         <div className='flex flex-col lg:flex-row justify-center items-center w-full h-full pt-4 space-y-8 lg:space-y-0 lg:space-x-8'>
           {/* Energy Consumption Dashboard Card */}
           <div className='px-4 md:px-8 lg:px-14 w-full lg:w-auto'>
-            <Card className='bg-slate-800 text-white w-full lg:w-[800px]'>
+            <Card className='bg-slate-800 text-white w-full '>
               <CardHeader>
                 <CardTitle>Energy Consumption Dashboard</CardTitle>
                 <CardDescription className='text-gray-400'>Next.js, Tailwind CSS, Typescript, MySQL</CardDescription>
@@ -41,15 +41,15 @@ const Projects = () => {
                 <Image className='shadow-lg mb-4 w-60 h-40 lg:w-80 lg:h-60 mx-2' src={AccountLink} alt="AccountLink" />
               </CardContent>
               <CardFooter className='flex flex-col'>
-                <p>A responsive Full-Stack Next.js React application that displays over 6 different user-friendly graph/chart</p>
-                <p>representations to visualize current energy consumption of buildings for Dena Energy Inc.</p>
+                <p>A responsive Full-Stack Next.js React application that displays over 6 different user-friendly graph/chart
+                representations to visualize current energy consumption of buildings for Dena Energy Inc.</p>
               </CardFooter>
             </Card>
           </div>
           
           {/* Whip For Rent Card */}
           <div className='px-4 md:px-8 lg:px-14 w-full lg:w-auto'>
-            <Card className='bg-slate-800 text-white w-full lg:w-[800px]'>
+            <Card className='bg-slate-800 text-white w-full '>
               <CardHeader>
                 <CardTitle>Whip For Rent</CardTitle>
                 <CardDescription className='text-gray-400'>Next.js, Tailwind CSS, Typescript, MySQL</CardDescription>
@@ -67,8 +67,8 @@ const Projects = () => {
                 <Image className='shadow-lg mb-4 w-60 h-40 lg:w-80 lg:h-60 mx-2' src={Admin} alt="Admin" />
               </CardContent>
               <CardFooter className='flex flex-col'>
-                <p>A full-stack Next.js React web application to simulate an online car rental system using MySQL database in</p>
-                <p>3NF with entities such as users, cars, reservations, car locations, and payment.</p>
+                <p>A full-stack Next.js React web application to simulate an online car rental system using MySQL database in
+                3NF with entities such as users, cars, reservations, car locations, and payment.</p>
               </CardFooter>
             </Card>
           </div>
