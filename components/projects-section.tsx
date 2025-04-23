@@ -8,6 +8,7 @@ import { Fullscreen, Github, Globe } from 'lucide-react'
 import Analytics from '@/public/images/Analytics.png'
 import employerEval from '@/public/images/employerEval.png'
 import Vtrain from '@/public/images/VTrain.png'
+import VDP from '@/public/images/VDP.png'
 
 import Image from 'next/image';
 
@@ -29,10 +30,12 @@ const projects = [
     githubUrl: "https://github.com/Ohhaseeb/employer_eval"
   },
   {
-    title: "V-Train",
-    description: "A personalized training application where coaches can assign weekly training for clients by creating their daily workouts",
-    image: Vtrain,
-    tags: ["Next.js", "Typescript", "Tailwind CSS", "Supabase", "Prisma"],
+    title: "VDP",
+    description: "A SaaS application where coaches can create and assign specific day to day training to their clients",
+    image: VDP,
+    tags: ["Next.js", "Typescript", "Tailwind CSS", "Supabase"],
+    liveUrl: "https://vertical-performance-development.vercel.app/",
+    githubUrl: "https://github.com/Ohhaseeb/vertical-performance-development"
   
   }
 ]
