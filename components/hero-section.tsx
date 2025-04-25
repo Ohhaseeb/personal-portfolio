@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 export function HeroSection() {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#93A5CF] to-background/50">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-white">
       <div className="container px-4 py-32 md:py-0 grid md:grid-cols-2 gap-8 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}

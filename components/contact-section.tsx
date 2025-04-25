@@ -1,4 +1,3 @@
-
 "use client"
 
 import { motion } from "framer-motion"
@@ -7,7 +6,8 @@ import { Github, Linkedin, Mail} from 'lucide-react'
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-[#93A5CF] to-background/50">
+    <section id="contact" className="py-20 bg-white">
+     
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -16,8 +16,8 @@ export function ContactSection() {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto text-center mb-16"
         >
-          <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
+          <p className="font-semibold text-gray-600">
             Have a question or want to work together?
           </p>
         </motion.div>
@@ -28,29 +28,31 @@ export function ContactSection() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <Card className="backdrop-blur-sm bg-white/50 rounded-xl">
+            <Card className="border border-gray-200 rounded-xl hover:shadow-md transition-shadow bg-white p-8">
               <CardHeader>
-                <CardTitle className="text-2xl">Contact Information</CardTitle>
+                <CardTitle className="text-2xl font-bold text-gray-800">Contact Information</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="flex items-center gap-4 ">
-                  <Mail className="w-5 h-5 text-primary" />
-                  <a href="mailto:your.email@example.com" className="hover:text-primary transition-colors">
+              <CardContent className="space-y-8">
+                <div className="flex items-center gap-4 hover:transform hover:translate-y-[-2px] transition-all">
+                  <div className="rounded-full bg-gray-50 p-3">
+                    <Mail className="w-5 h-5 text-gray-700" />
+                  </div>
+                  <a href="mailto:haseebsayed960@gmail.com" className="text-gray-700 hover:text-blue-600 transition-colors">
                     haseebsayed960@gmail.com
                   </a>
                 </div>
-                <div className="flex gap-4 justify-center">
+                <div className="flex gap-6 justify-center">
                   <a
                     href="https://github.com/Ohhaseeb"
-                    className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                    className="p-3 rounded-full bg-gray-50 hover:bg-gray-100 hover:shadow-sm transition-all"
                   >
-                    <Github className="w-6 h-6" />
+                    <Github className="w-6 h-6 text-gray-700" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/haseeb-sayed-045207292/"
-                    className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                    className="p-3 rounded-full bg-gray-50 hover:bg-gray-100 hover:shadow-sm transition-all"
                   >
-                    <Linkedin className="w-6 h-6" />
+                    <Linkedin className="w-6 h-6 text-gray-700" />
                   </a>
                   
                 </div>

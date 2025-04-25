@@ -1,68 +1,75 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Code2, Laptop, Rocket } from 'lucide-react'
-
-const skills = [
-  {
-    icon: Code2,
-    title: "Frontend Development",
-    description: "Creating responsive and intuitive user interfaces with modern frameworks like Next.js",
-  },
-  {
-    icon: Laptop,
-    title: "Backend Development",
-    description: "Building robust server-side applications and APIs",
-  },
-  {
-    icon: Rocket,
-    title: "DevOps",
-    description: "Implementing CI/CD pipelines and cloud infrastructure",
-  },
-]
+import type React from "react"
+import { CodeIcon, PaletteIcon, UsersIcon, LaptopIcon } from "lucide-react"
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-t from-[#93A5CF] to-background/50">
-      <div className="container px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="max-w-2xl mx-auto text-center mb-16"
-        >   
-          <h2 className="text-4xl font-bold mb-4 text-primary">About Me</h2>
-          <p className=" text-gray-600 font-semibold">
-            I specialize in building modern web applications with a focus on user experience,
-            performance, and scalability. With expertise in both frontend and backend
-            development, I bring ideas to life through clean, efficient code. I also love playing sports such as volleyball!
-          </p>
-        </motion.div>
+    <section className="bg-white ">
+      <div className="w-full h-px bg-gray-200 mb-20"></div>
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-3xl font-bold mb-3 text-gray-900 pb-10">I'd say im pretty good at these things</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {skills.map((skill, index) => (
-            <motion.div
-              key={skill.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full rounded-xl bg-white/40 shadow-lg">
-                <CardContent className="pt-6">
-                  <div className="rounded-full bg-primary/10 p-3 w-12 h-12 flex items-center justify-center mb-4 bg-gradient-to-t from-[#93A5CF] to-background/50">
-                    <skill.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{skill.title}</h3>
-                  <p className="text-gray-600 font-semibold">{skill.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+          <SkillCard
+            icon={<LaptopIcon className="w-8 h-8 text-blue-700" />}
+            title="Software Engineer"
+            description="I build robust and efficient applications with a focus on clean code, scalable architecture, and solving problems."
+            enjoyment="Languages I work with:"
+            enjoymentItems="JavaScript, TypeScript, Python, Java, C++"
+            tools="Dev Tools:"
+            toolItems={["VS Code", "Git", "Docker", "Azure", "Agile"]}
+          />
+          <SkillCard
+            icon={<CodeIcon className="w-8 h-8 text-blue-700" />}
+            title="Full Stack Developer"
+            description="I like to code things from scratch, and enjoy bringing ideas to life in the browser."
+            enjoyment="Languages I use:"
+            enjoymentItems="HTML, CSS, JavaScript, TypeScript, React, SQL"
+            tools="Dev Tools:"
+            toolItems={["VS Code", "Next.js", "Tailwind CSS", "GitHub", "Terminal"]}
+          />
+          <SkillCard
+            icon={<UsersIcon className="w-8 h-8 text-blue-700" />}
+            title="Leadership"
+            description="I genuinely care about people, and love helping fellow athletes become the best version of themselves."
+            enjoyment="Experiences I draw from:"
+            enjoymentItems="Head Volleyball Coach"
+            tools="Mentorship:"
+            toolItems={["1-on-1 coaching", "VDP", "Team Building"]}
+          />
         </div>
       </div>
     </section>
+  )
+}
+
+interface SkillCardProps {
+  icon: React.ReactNode
+  title: string
+  description: string
+  enjoyment: string
+  enjoymentItems: string
+  tools: string
+  toolItems: string[]
+}
+
+function SkillCard({ icon, title, description, enjoyment, enjoymentItems, tools, toolItems }: SkillCardProps) {
+  return (
+    <div className="bg-white p-8 rounded-lg shadow-md">
+      <div className="flex justify-center mb-4">
+        <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">{icon}</div>
+      </div>
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <h4 className="text-blue-700 font-bold mb-2">{enjoyment}</h4>
+      <p className="text-gray-600 mb-4">{enjoymentItems}</p>
+      <h4 className="text-blue-700 font-bold mb-2">{tools}</h4>
+      <ul className="text-gray-600">
+        {toolItems.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
