@@ -20,7 +20,7 @@ export function NavBar() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b"
+      className="bg-background border-b"
     >
       <nav className="container flex items-center justify-between h-16 px-4">
         <Link href="/" className="text-xl font-bold">
