@@ -1,14 +1,14 @@
 "use client"
 
 import type React from "react"
-import { CodeIcon, PaletteIcon, UsersIcon, LaptopIcon } from "lucide-react"
+import { CodeIcon, UsersIcon, LaptopIcon } from "lucide-react"
 
 export function AboutSection() {
   return (
     <section className="bg-white ">
       <div className="w-full h-px bg-gray-200 mb-20"></div>
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-3 text-gray-900 pb-10">I'd say im pretty good at these things</h2>
+        <h2 className="text-3xl font-bold mb-3 text-gray-900 pb-10">I&apos;d say im pretty good at these things</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <SkillCard
             icon={<LaptopIcon className="w-8 h-8 text-blue-700" />}
