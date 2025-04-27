@@ -21,11 +21,11 @@ const projects = [
     githubUrl: "https://github.com/Ohhaseeb/vertical-performance-development",
     why: "Vertical jump training is a crucial aspect of athletic development, however many programs are not tailored to the individual athlete and very overpriced. I was victim to this paying $100 a month for a program so I came up with VDP using my knowledge of software development and physical training to create a platform that is affordable and effective.",
     what: "I developed a SaaS platform that streamlines the training management workflow with features for program creation, assignment, progress tracking, and performance analytics. I can track my clients progress and make adjustments to their program as needed without having to pay for another companies product",
-    results: "Serving 20+ active users with personalized week to week training programs, resulting in measurable vertical jump performance improvements for users upwards of 4+ inches. Generating $200+ in monthly recurring revenue through tiered subscription model, with 85% user retention rate"
+    results: "Serving 20+ active users with personalized week to week training programs, resulting in measurable vertical jump performance improvements for users upwards of 4+ inches. Generating $200+ in monthly recurring revenue through tiered subscription model, with 85% user retention rate. Makes my coaching job easier to keep track of all my clients and their workouts/progress"
   },
   {
     title: "Energy Consumption Dashboard",
-    description: "A full stack web application to visualize energy data, routing engineered from multiple APIs such as PG&E, EnergyStar, and AccuEnergy", 
+    description: "A full stack web application to visualize energy data, routing engineered from multiple APIs such as PG&E, EnergyStar, and AccuEnergy (Disclaimer: this is a project done for work not techincally personal)", 
     image: Analytics,
     tags: ["Next.js", "Typescript", "MySQL", "TailwindCSS", "Digital Ocean"],
     liveUrl: "https://energydian.com/sign-in?redirect_url=http%3A%2F%2Fenergydian.com%2F",
@@ -72,7 +72,7 @@ export function ProjectsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="flex flex-col md:flex-row gap-8 items-center p-8 border border-gray-200 rounded-xl hover:shadow-md transition-shadow bg-white"
+                className="flex flex-col md:flex-row gap-8 items-center p-8 border-b border-gray-200 rounded-b-xl hover:shadow-md transition-shadow bg-white"
               >
                 {/* Left side - Image and buttons */}
                 <div className="w-full md:w-2/5">
