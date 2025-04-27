@@ -5,7 +5,7 @@ import { TwitterIcon, GithubIcon, LinkedinIcon, MailIcon } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-blue-800 py-12 text-white">
+    <footer id = "contact" className="bg-blue-800 py-12 text-white">
       <div className="container mx-auto px-4 text-center">
         <div className="mb-8">
           <h3 className="text-2xl font-bold">Living, learning, & leveling up one day at a time.</h3>
