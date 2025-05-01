@@ -6,8 +6,18 @@ import { Button } from "@/components/ui/button"
 import { Fullscreen, Github, Globe } from 'lucide-react'
 import Analytics from '@/public/images/Analytics.png'
 import employerEval from '@/public/images/employerEval.png'
-import Vtrain from '@/public/images/VTrain.png'
 import VDP from '@/public/images/VDP.png'
+import poster from '@/public/images/poster.png'
+import hero from '@/public/images/hero.png'
+import coachdashboard from '@/public/images/coachdashboard.png'
+import calendar from '@/public/images/calendar.png'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 import Image from 'next/image';
 
@@ -15,7 +25,25 @@ const projects = [
   {
     title: "VDP",
     description: "A SaaS application where coaches can create and assign specific day to day training to their clients",
-    image: VDP,
+    images: [
+      {
+        src: VDP,
+        alt: "VDP Dashboard"
+      },
+      // Add more images here when you have them
+       {
+         src: hero,
+         alt: "VDP Feature 2"
+       },
+       {
+         src: coachdashboard,
+         alt: "VDP Feature 3"
+       },
+       {
+         src: calendar,
+         alt: "VDP Feature 4"
+       },
+    ],
     tags: ["Next.js", "Typescript", "Tailwind CSS", "Supabase"],
     liveUrl: "https://vertical-performance-development.vercel.app/",
     githubUrl: "https://github.com/Ohhaseeb/vertical-performance-development",
@@ -25,8 +53,18 @@ const projects = [
   },
   {
     title: "Energy Consumption Dashboard",
-    description: "A full stack web application to visualize energy data, routing engineered from multiple APIs such as PG&E, EnergyStar, and AccuEnergy (Disclaimer: this is a project done for work not techincally personal)", 
-    image: Analytics,
+    description: "A full stack web application to visualize energy data, routing engineered from multiple APIs such as PG&E, EnergyStar, and AccuEnergy (Disclaimer: this is a project done for work not personal)", 
+    images: [
+      {
+        src: Analytics,
+        alt: "Energy Dashboard Analytics"
+      },
+      // Add more images here when you have them
+       {
+         src: poster,
+         alt: "Energy Dashboard Feature 2"
+       },
+    ],
     tags: ["Next.js", "Typescript", "MySQL", "TailwindCSS", "Digital Ocean"],
     liveUrl: "https://energydian.com/sign-in?redirect_url=http%3A%2F%2Fenergydian.com%2F",
     githubUrl: "https://github.com/TrustfulDev/dena-energy-dashboard",
@@ -77,13 +115,35 @@ export function ProjectsSection() {
                 {/* Left side - Image and buttons */}
                 <div className="w-full md:w-2/5">
                   <div className="rounded-xl overflow-hidden border border-gray-100 mb-4">
-                    <Image 
-                      src={project.image} 
-                      alt={project.title}              
-                      width={600}               
-                      height={400}
-                      className="w-full h-auto object-cover"
-                    />
+                    {(project.title === "VDP" || project.title === "Energy Consumption Dashboard") && project.images ? (
+                      <Carousel className="w-full">
+                        <CarouselContent>
+                          {project.images.map((image, imageIndex) => (
+                            <CarouselItem key={imageIndex}>
+                              <div className="relative aspect-[16/9] w-full">
+                                <Image 
+                                  src={image.src} 
+                                  alt={image.alt}              
+                                  fill
+                                  className="object-contain"
+                                  sizes="(max-width: 768px) 100vw, 600px"
+                                />
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="absolute left-4 h-8 w-8 rounded-full bg-white/50 hover:bg-black/70 border-none" />
+                        <CarouselNext className="absolute right-4 h-8 w-8 rounded-full bg-white/50 hover:bg-black/70 border-none" />
+                      </Carousel>
+                    ) : project.image ? (
+                      <Image 
+                        src={project.image} 
+                        alt={project.title}              
+                        width={600}               
+                        height={400}
+                        className="w-full h-auto object-cover"
+                      />
+                    ) : null}
                   </div>
                   <div className="flex flex-wrap gap-3 mb-4">
                     {project.tags.map(tag => (
