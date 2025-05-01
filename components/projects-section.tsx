@@ -10,7 +10,7 @@ import VDP from '@/public/images/VDP.png'
 import poster from '@/public/images/poster.png'
 import hero from '@/public/images/hero.png'
 import coachdashboard from '@/public/images/coachdashboard.png'
-import calendar from '@/public/images/Calendar.png'
+import calendar from '@/public/images/calendar.png'
 import {
   Carousel,
   CarouselContent,
