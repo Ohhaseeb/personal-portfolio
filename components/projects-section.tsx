@@ -18,6 +18,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import {useRef } from 'react'
+import Autoplay from 'embla-carousel-autoplay'
 
 import Image from 'next/image';
 
@@ -85,6 +87,15 @@ const projects = [
 ]
 
 export function ProjectsSection() {
+  // Create separate refs for each project's autoplay plugin
+  const vdpAutoplayRef = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  )
+  
+  const energyAutoplayRef = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  )
+
   return (
     <section id="projects" className="py-10 bg-white">
       <div className="w-full h-px bg-gray-200 mb-20"></div>
@@ -115,8 +126,38 @@ export function ProjectsSection() {
                 {/* Left side - Image and buttons */}
                 <div className="w-full md:w-2/5">
                   <div className="rounded-xl overflow-hidden border border-gray-100 mb-4">
-                    {(project.title === "VDP" || project.title === "Energy Consumption Dashboard") && project.images ? (
-                      <Carousel className="w-full">
+                    {project.title === "VDP" && project.images ? (
+                      <Carousel
+                        className="w-full"
+                        plugins={[vdpAutoplayRef.current]}
+                        onMouseEnter={() => vdpAutoplayRef.current.stop()}
+                        onMouseLeave={() => vdpAutoplayRef.current.play()}
+                      >
+                        <CarouselContent>
+                          {project.images.map((image, imageIndex) => (
+                            <CarouselItem key={imageIndex}>
+                              <div className="relative aspect-[16/9] w-full">
+                                <Image 
+                                  src={image.src} 
+                                  alt={image.alt}              
+                                  fill
+                                  className="object-contain"
+                                  sizes="(max-width: 768px) 100vw, 600px"
+                                />
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="absolute left-4 h-8 w-8 rounded-full bg-white/50 hover:bg-black/70 border-none" />
+                        <CarouselNext className="absolute right-4 h-8 w-8 rounded-full bg-white/50 hover:bg-black/70 border-none" />
+                      </Carousel>
+                    ) : project.title === "Energy Consumption Dashboard" && project.images ? (
+                      <Carousel
+                        className="w-full"
+                        plugins={[energyAutoplayRef.current]}
+                        onMouseEnter={() => energyAutoplayRef.current.stop()}
+                        onMouseLeave={() => energyAutoplayRef.current.play()}
+                      >
                         <CarouselContent>
                           {project.images.map((image, imageIndex) => (
                             <CarouselItem key={imageIndex}>
